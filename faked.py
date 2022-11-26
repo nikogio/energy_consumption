@@ -17,7 +17,12 @@ def create_data(x):
         friends_data[i]['address']= fake.address() 
         friends_data[i]['city']= fake.city() 
         friends_data[i]['consumption']= fake.random_int(min=0, max=7000)
-        friends_data[i]['sqm2 (1-100)'] = np.random.randint(0,101)
+        friends_data[i]['range_0_4']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=0.2, max_value=0.6)
+        friends_data[i]['range_4_8']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=0.5, max_value=1.1)
+        friends_data[i]['range_8_12']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=2.1, max_value=2.8)
+        friends_data[i]['range_12_16']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=1.3, max_value=2.0)
+        friends_data[i]['range_16_20']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=5.0, max_value=5.8)
+        friends_data[i]['range_20_24']= fake.pyfloat(left_digits=1, right_digits=1, positive=True, min_value=1.4, max_value=2.0)
         friends_data[i]['from_date'] = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)    
     return friends_data
     
