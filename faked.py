@@ -11,6 +11,7 @@ def create_data(x):
     # dictionary 
     friends_data ={} 
     for i in range(0, x): 
+        
         friends_data[i]={} 
         friends_data[i]['name']= fake.name() 
         friends_data[i]['address']= fake.address() 
